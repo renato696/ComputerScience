@@ -28,13 +28,9 @@ int main(){
 
 
 	if((lado1+lado2) > ladoMaior){
-		if((ladoA == ladoB) && (ladoB == ladoC)){
+		if((ladoMaior == lado1) && (lado1 == lado2)){
 			printf("\nTrata-se de triangulo equilatero\n");}
-		else if((ladoA == ladoB) && (ladoB != ladoC)){
-			printf("\nTrata-se de triangulo isosceles\n");}
-		else if((ladoA == ladoC) && (ladoC != ladoB)){
-			printf("\nTrata-se de triangulo isosceles\n");}	
-		else if((ladoB == ladoC) && (ladoC != ladoA)){
+		else if((lado1 == lado2) && (lado2 != ladoMaior)){
 			printf("\nTrata-se de triangulo isosceles\n");}
 		else { printf("\nTrata-se de triangulo escaleno\n");}
 	} else { printf("\nAs medidas informadas não formam um triangulo\n");}
