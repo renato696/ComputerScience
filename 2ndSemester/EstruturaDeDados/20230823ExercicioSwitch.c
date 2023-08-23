@@ -13,9 +13,9 @@ int main(){
         case 'e':
         case 'i':
         case 'o':
-        case 'u': printf("trata-se de uma vogal");
+        case 'u': printf("trata-se de uma vogal \n");
         break;
-        default: printf("trata-se de uma consoante");
+        default: printf("trata-se de uma consoante \n");
         break;
     };
 
