@@ -21,13 +21,13 @@ int main(){
     printf("Vetor de 10 elementos - Quantos são primos?");
 
     //Rotina de Leitura do vetor
-    for (i = 0; i < 4; i++){
+    for (i = 0; i < 10; i++){
         printf("\nDigite vetor[%d]: ", i);
         scanf("%d", &vetor[i]);
     }
 
 //Debug - leitura do vetor, se correto
-//    for (i = 0; i < 4; i++){
+//    for (i = 0; i < 10; i++){
 //        printf("%d  ", vetor[i]);
 //    }
 
