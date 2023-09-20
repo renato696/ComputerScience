@@ -10,7 +10,7 @@ int main(){
     
     setlocale(LC_ALL, "Portuguese");
 
-int vector[10], i, valorX, counterX;
+int vector[10], i, valorX, counterX = 0;
 
     printf("Vetor de 10 posicoes - encontre o valor de X");
     printf("\nCarregando o vetor...");
@@ -32,7 +32,7 @@ int vector[10], i, valorX, counterX;
     }
 
     if(counterX > 0){
-        printf("\n\nHa %d ocorrencias de %d no vetor, nas posicoes:  ", counterX, valorX);
+        printf("\n\nHa %d ocorrencias do valor %d no vetor, nas posicoes:  ", counterX, valorX);
         for(i=0; i<10; i++){
             if(vector[i] == valorX) {
                 printf("%d\n", i);
