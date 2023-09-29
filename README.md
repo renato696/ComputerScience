@@ -1,2 +1,2 @@
 # ComputerScience
-Repository for my codes wrote in the Computer Science degree
+Repository for my codes during the Computer Science degree
