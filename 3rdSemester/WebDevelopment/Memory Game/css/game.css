@@ -40,6 +40,7 @@ header {
     position: relative; /*para as faces respeitarem as delimitações da carta*/
     transition: all 400ms ease; /*girar a carta*/
     transform-style: preserve-3d;
+    background-color: #ccc;
 }
 
 .reveal_card {

@@ -22,7 +22,8 @@ const checkEndGame = () => {
     const disableCards = document.querySelectorAll('.disable_card');
 
     if(disableCards.length == 20){
-        alert('You WIN');
+        clearInterval(this.loop);
+        alert(`Parabens, ${spanPlayer.innerHTML}! Seu tempo foi: ${timer.innerHTML}`);
     }
 }
 
@@ -102,7 +103,7 @@ const loadGame = () => {
 }
 
 const startTimer = () => {
-    setInterval(() => {
+    this.loop = setInterval(() => {
         const currentTime = Number(timer.innerHTML);
         timer.innerHTML = currentTime + 1;
     }, 1000);
