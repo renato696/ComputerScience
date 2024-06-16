@@ -1,10 +1,21 @@
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-image: url(../images/eterniabg.png);
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px 50px;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr); /*fr = fraction, ocupa a linha toda dividido em fraçoes*/
     gap: 15px;
     width: 100%;
     max-width: 800px;
-    margin: 100px auto;
+    margin: 0 auto;
 }
 
 .card {
