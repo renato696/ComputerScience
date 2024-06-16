@@ -1,5 +1,9 @@
 const grid = document.querySelector('.grid');
 
+const characters = ['heman', 'esqueleto', 'teela', 'maligna', 'mentor', 'homemFera', 'gorpo', 'mandibula', 'feiticeira', 'gatoGuerreiro'];
+
+
+/*função para criar uma nova carta*/
 const createElement = (tag, className) => {
     const element = document.createElement(tag);
     element.className = className;
@@ -7,20 +11,30 @@ const createElement = (tag, className) => {
 }
 
 
-const createCard = () => {
+const createCard = (character) => {
 
-    const card = document.createElement('div');
-    const front = document.createElement('div');
-    const back = document.createElement('div');
+    const card = createElement('div', 'card');
+    const front = createElement('div', 'face front');
+    const back = createElement('div', 'face back');
 
-    card.className = 'card'; /*adiciono a class ao elemento*/
-    front.className = 'face front';
-    back.className = 'face back';
+    front.style.backgroundImage = `url('../images/${character}.png')`;
 
     card.appendChild(front);
     card.appendChild(back);
 
-    grid.appendChild(card);
+    return card;
 }
 
-createCard();
+const loadGame = () => {
+
+    const duplicateCharacters = [ ...characters, ...characters]; //spread operator
+
+    duplicateCharacters.forEach((character) => {
+        
+        const card = createCard(character);
+        grid.appendChild(card);
+    });
+
+}
+
+loadGame();
