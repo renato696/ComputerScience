@@ -3,10 +3,25 @@ main {
     flex-direction: column;
     width: 100%;
     background-image: url(../images/eterniabg.png);
+    background-size: cover;
     min-height: 100vh;
     align-items: center;
     justify-content: center;
     padding: 20px 20px 50px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #322C50;
+    color: #ADFF2F;
+    font-size: 1.2em;
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    margin: 0 0 30px;
+    border-radius: 5px;
 }
 
 .grid {
