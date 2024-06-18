@@ -1,12 +1,13 @@
+//Seleciona os elementos HTML necessários para a manipulação
 const grid = document.querySelector('.grid');
 const spanPlayer = document.querySelector('.player');
 const timer = document.querySelector('.timer');
 
-
+//array contendo os personagens do jogo
 const characters = ['heman', 'esqueleto', 'teela', 'maligna', 'mentor', 'homemFera', 'gorpo', 'mandibula', 'feiticeira', 'gatoGuerreiro'];
 
 
-/*função para criar uma nova carta*/
+//função para criar uma nova carta
 const createElement = (tag, className) => {
    
     const element = document.createElement(tag);
@@ -15,9 +16,11 @@ const createElement = (tag, className) => {
     return element;
 }
 
+//variaveis para armazenar a primeira e a segunda carta selecionada
 let firstCard ='';
 let secondCard ='';
 
+//função para verificar fim do jogo
 const checkEndGame = () => {
     const disableCards = document.querySelectorAll('.disable_card');
 
@@ -27,6 +30,7 @@ const checkEndGame = () => {
     }
 }
 
+//função para verificar se as duas cartas selecionadas são iguais
 const checkCards = () => {
     
     const firstCharacter = firstCard.getAttribute('data-character');
@@ -51,6 +55,7 @@ const checkCards = () => {
     };
 };
 
+//função para revelar a carta quando clicada
 const revealCard = ({ target }) => {
 
     if (target.parentNode.className.includes('reveal_card')) {
@@ -70,7 +75,7 @@ const revealCard = ({ target }) => {
     
 }
 
-
+//função para criar cartas do jogo
 const createCard = (character) => {
 
     const card = createElement('div', 'card');
@@ -88,6 +93,7 @@ const createCard = (character) => {
     return card;
 }
 
+//função para carregar o jogo duplicando as cartas
 const loadGame = () => {
 
     const duplicateCharacters = [ ...characters, ...characters]; //spread operator
@@ -102,6 +108,7 @@ const loadGame = () => {
 
 }
 
+//função do temporizador
 const startTimer = () => {
     this.loop = setInterval(() => {
         const currentTime = Number(timer.innerHTML);
@@ -109,7 +116,7 @@ const startTimer = () => {
     }, 1000);
 }
 
-
+//função para carregar a página do jogo
 window.onload = () => {
   
     spanPlayer.innerHTML = localStorage.getItem('player');
