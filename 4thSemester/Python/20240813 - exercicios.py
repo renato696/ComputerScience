@@ -67,4 +67,10 @@ print(palavra[::-1])
 idade = int(input('Digite sua idade: ')) 
 if idade >= 18: print('maior de idade') 
 else: print('menor de idade')
+
+preco_tabela = float(input('Digite o preço do produto sem desconto: '))
+promocao = input('O produto está em promoção? sim ou não?')
+preco_promocional = preco_tabela * .80
+if promocao == sim: print(f'O preço final do produto é': {preco_promocional}') 
+else: print(f'Hoje você paga o preço tabela de {preco_tabela}')
 '''
