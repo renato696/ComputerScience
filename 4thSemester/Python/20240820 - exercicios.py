@@ -30,7 +30,7 @@ START
 - validar cada nota se entre 0-10
 - calcule a média das notas
 - comparar a media com as notas alvo e informar se aprovado/recuperacao/reprovado
-"""
+
 
 print('Média das notas e resultado final\n')
 
@@ -60,3 +60,5 @@ elif  5 <= media < 7:
     print(f'Sua média é {media:.2f}, você ficou de recuperação')
 else:
     print(f'Sua média foi {media:.2f}, você reprovou.')
+"""
+
