@@ -10,7 +10,7 @@ START
 END
 
 
-print('Calculadora de Bonus Salarial')
+print('Calculadora de Bonus Salarial\n')
 
 salario = float(input('Qual o valor do seu salário? '))
 anos_de_trabalho = int(input('Quantos anos de trabalho na empresa você tem? '))
@@ -32,17 +32,31 @@ START
 - comparar a media com as notas alvo e informar se aprovado/recuperacao/reprovado
 """
 
-print('Média das notas e resultado final')
+print('Média das notas e resultado final\n')
 
-nota1 = int(input('Informe a nota da sua primeira nota: '))
-nota2 = int(input('Informe a nota da sua segunda nota: '))
-nota3 = int(input('Informe a nota da sua terceira nota: '))
+nota1 = int(input('Informe a nota da sua primeira nota entre 0 e 10: '))
+if 0 <= nota1 <= 10:
+    print('Nota armazenada')
+else:
+    nota1 = int(input('Informe a nota da sua primeira nota entre 0 e 10 corretamente: '))
+        
+nota2 = int(input('Informe a nota da sua segunda nota entre 0 e 10: '))
+if 0 <= nota2 <= 10:
+    print('Nota armazenada')
+else:
+    nota2 = int(input('Informe a nota da sua segunda nota entre 0 e 10 corretamente: '))
+    
+nota3 = int(input('Informe a nota da sua terceira nota entre 0 e 10: '))
+if 0 <= nota3 <= 10:
+    print('Nota armazenada')
+else:
+    nota3 = int(input('Informe a nota da sua terceira nota entre 0 e 10 corretamente: '))
 
 media = (nota1 + nota2 + nota3) / 3
 
 if media >= 7:
-    print(f'Sua média é {media}, você foi aprovado!')
+    print(f'Sua média é {media:.2f}, você foi aprovado!')
 elif  5 <= media < 7:
-    print(f'Sua média é {media}, você ficou de recuperação')
+    print(f'Sua média é {media:.2f}, você ficou de recuperação')
 else:
-    print(f'Sua média foi {media}, você reprovou.')
+    print(f'Sua média foi {media:.2f}, você reprovou.')
