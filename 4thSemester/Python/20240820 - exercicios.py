@@ -30,6 +30,7 @@ START
 - validar cada nota se entre 0-10
 - calcule a média das notas
 - comparar a media com as notas alvo e informar se aprovado/recuperacao/reprovado
+END
 
 
 print('Média das notas e resultado final\n')
@@ -61,4 +62,23 @@ elif  5 <= media < 7:
 else:
     print(f'Sua média foi {media:.2f}, você reprovou.')
 """
+
+"""
+START
+- Nome: Calculo de folha de pagamento
+- informar o valor da hora trabalhada
+- informar a quantidade de horas trabalhadas
+- calcular o valor do salario bruto
+- calcular o valor do desconto do IRPF - de acordo com a aliquota - armazenar
+- calcular o valor do Sindicato 
+- Calcular o valor do INSS
+- Calcular o valor do FGTS
+- Calcular o valor total dos descontos
+- calcular o salario liquido
+-  informar o resumo apresentando: salario bruto; IRPF; INSS; FGTS; total dos descontos; salario liquido
+END
+"""
+
+print('Calculadora de Folha de Pagamento')
+
 
