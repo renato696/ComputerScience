@@ -114,7 +114,8 @@ START
 - informe o comprimento do reservatorio em centimetros - armazene
 - informe a largura do reservatório em centimetros - armazene
 - informe a altura do reservatório em centimetros - armazene
-- calcule o volume (capacidade) do reservatório em litros (1 litro = 1000cm3) - armazene
+- calcule o volume do reservatório (capacidade)
+- converta o volume do reservatório para litros (1 litro = 1000cm3) - armazene
 - obtenha o consumo médio diário dos utilizadores (litros/dia) - armazene
 - informe acapacidade total do reservatorio em litros
 - informe a autonomia do reservatório em dias
@@ -124,4 +125,16 @@ START
     - reduzido se autonomia maior que 7 dias 
 END
 """
+
+print('Consumo de água de reservatório')
+
+comprimento_do_reservatorio = int(input('Informe o comprimento do reservatório em centímetros: '))
+largura_do_reservatorio = int(input('Informe a largura do reservatório em centímetros: '))
+altura_do_reservatorio = int(input('Informe a altura do reservatório em centímetro: '))
+
+volume_do_reservatorio = comprimento_do_reservatorio * largura_do_reservatorio * altura_do_reservatorio
+
+volume_em_litros = volume_do_reservatorio / 1000
+
+
 
