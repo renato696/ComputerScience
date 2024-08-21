@@ -77,8 +77,51 @@ START
 - calcular o salario liquido
 -  informar o resumo apresentando: salario bruto; IRPF; INSS; FGTS; total dos descontos; salario liquido
 END
+
+
+print('Calculadora de Folha de Pagamento\n')
+
+horas_trabalhadas = int(input('Informe o número de horas trabalhadas no mês: '))
+valor_hora_trabalhada = float(input('Quanto você ganha por hora trabalhada: '))
+salario_bruto = horas_trabalhadas * valor_hora_trabalhada
+
+if salario_bruto <= 900:
+    irpf = salario_bruto
+elif 900 < salario_bruto <= 1500:
+    irpf = salario_bruto * 0.05
+elif 1500 < salario_bruto < 2500:
+    irpf = salario_bruto * 0.1
+else: irpf = salario_bruto * 0.2
+
+sindicato = salario_bruto * 0.03
+inss = salario_bruto * 0.1
+fgts = salario_bruto * 0.11
+total_descontos = irpf + inss
+salario_liquido = salario_bruto - total_descontos
+
+print(f'Salário Bruto: R$ {salario_bruto}')
+print(f'\nIRPF: R$ {irpf}')
+print(f'INSS (10%): R$ {inss}')
+print(f'FGTS (11%): R$ {fgts}')
+print(f'\nTotal de Descontos: R$ {total_descontos}')
+print(f'Salário Liquido: R$ {salario_liquido}')
 """
 
-print('Calculadora de Folha de Pagamento')
-
+"""
+EX - Consumo de água de reservatório específico
+START
+- informe as medidas do reservatório de água
+- informe o comprimento do reservatorio em centimetros - armazene
+- informe a largura do reservatório em centimetros - armazene
+- informe a altura do reservatório em centimetros - armazene
+- calcule o volume (capacidade) do reservatório em litros (1 litro = 1000cm3) - armazene
+- obtenha o consumo médio diário dos utilizadores (litros/dia) - armazene
+- informe acapacidade total do reservatorio em litros
+- informe a autonomia do reservatório em dias
+- informe a classificação do consumo com base nos dias de autonomia
+    - elevado se autonomia menor que 2 dias
+    - moderado se autonomia entre 2 a 7 dias
+    - reduzido se autonomia maior que 7 dias 
+END
+"""
 
