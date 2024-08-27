@@ -10,7 +10,7 @@ for letra in nome:
     print(letra)
 """
 
-colegas = [] # lista vazia, tbm posso fazer com dicionários, tuplas
+colegas = []
 
 for i in range(4):
     nome_dos_colegas = input('Digite o nome do colega: ')
