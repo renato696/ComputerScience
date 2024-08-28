@@ -20,7 +20,6 @@ print(colegas)
 for numero in range(1, 11):
     if numero % 2 == 0: print(f"{numero} é par")
     else: print(f"{numero} é impar")
-"""
 
 numero = int(input('Digite um número: '))
 soma = 0
@@ -29,4 +28,14 @@ for i in range(3, numero, 1*3):
     print(i)
     soma = soma + i
     
-print(f"O resultado da soma é: {soma}")
+print(f'O resultado da soma é: {soma}')
+
+
+valor = int(input('Insira um valor: '))
+
+for i in range(1, 11):
+    print(f'{valor} x {i} = {valor*i}')
+
+frase = input('Digite uma frase: ')
+print(len(frase))
+"""
