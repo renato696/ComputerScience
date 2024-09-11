@@ -66,4 +66,11 @@
 #
 #-------------------------------------------------------------------------------------------------
 
+numbers = int(input('Digite um numero: '))
 
+while True: 
+    if numbers == 0: break
+    elif numbers % 2 == 0: print('Esse numero é par')
+    else: print('Esse numero é impar')
+    
+    
