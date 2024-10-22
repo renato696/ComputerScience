@@ -1,0 +1,137 @@
+"""
+ok 1- receba a data de nascimento de dois usuarios, verifique a idade dos dois, informe quem é o mais velho e qual faz aniversario primeiro.
+
+ok 2- utilizando a biblioteca OS, crie um programa que liste todos os arquivos e diretorios do seu computador no endereço atual do sistema.
+
+3- utilizando a biblioteca Json, receba informações do usuario, armazene-as em um dicionário e converta para o formato Json.
+
+ok 4- Calcule o fatorial de um numero fornecido pelo usuario
+
+ok 5- gere uma senha aleatoria composta por letras minusculas, maiusculas e numeros
+
+ok 6- crie uma senha aleatoria (numeros entre 10 e 50), peça para o usuario digitar a senha e verifique se ele acertou a senha gerada
+
+ok 7- utilizando a biblioteca string, crie um programa que conte quantas vogais tem uma frase digitada pelo usuario
+"""
+
+"""
+#Aniversario
+from datetime import datetime
+
+nome1 = input("Digite nome do usuario: ")
+aniversario1 = input("Digite sua data de nascimento: ")
+nome2 = input("Digite o nome do usuario: ")
+aniversario2 = input("Digite sua data de nascimento: ")
+formato = "%d/%m/%Y"
+data1 = datetime.strptime(aniversario1, formato)
+data2 = datetime.strptime(aniversario2, formato)
+
+today = datetime.now()
+
+idade1 = today.year - data1.year
+idade2 = today.year - data2.year
+
+if idade1 > idade2:
+    print(f"{nome1} é mais velho")
+elif idade2 > idade1:
+    print(f"{nome2} é mais velho")
+else:
+    idade1 = today.month - data1.month
+    idade2 = today.month - data2.month
+    if idade1 > idade2:
+        print(f"{nome1} é mais velho")
+    elif idade2 > idade1:
+        print(f"{nome2} é mais velho")
+    else:
+        idade1 = today.day - data1.day
+        idade2 = today.day - data2.day
+        if idade1 > idade2:
+            print(f"{nome1} é mais velho")
+        elif idade2 > idade1:
+            print(f"{nome2} é mais velho")
+        else:
+            print("Ambos tem a mesma idade")
+"""
+
+"""
+#OS
+import os
+print(os.system('ls'))
+"""
+
+"""
+#JSON
+import json
+
+informacoes = {}
+
+nome = input("Digite seu nome: ")
+idade = input("Digite sua idade: ")
+whatsapp = input("Digite seu whatsapp: ")
+
+informacoes["nome"] = nome
+informacoes["idade"] = idade
+informacoes["whatsapp"] = whatsapp
+
+resultadoJson = json.dumps(informacoes)
+
+print(resultadoJson)
+"""
+
+"""
+#Fatorial
+import math
+     
+numero = int(input('Digite um numero: '))
+     
+print (f"O  factorial de {numero} é : ")
+print (math.factorial(numero))
+"""
+
+"""
+#Senha aletoria
+import random
+import string
+
+def gerar_senha(tamanho=8):
+    caracteres = string.ascii_letters + string.digits
+    senha = ''.join(random.choice(caracteres) for _ in range(tamanho))
+    return senha
+
+senha_gerada = gerar_senha()
+print("Senha gerada:", senha_gerada)
+"""
+
+"""
+#Senha entre 10-50 
+import random
+import string
+
+def gerar_senha(tamanho=1):
+    numeros = [str(num) for num in range(10, 51)]
+    senha = ''.join(random.choice(numeros) for _ in range(tamanho))
+    return senha
+
+senha_gerada = gerar_senha()
+print("Senha gerada:", senha_gerada)
+senha = input("Digite a senha: ")
+if senha == senha_gerada:
+    print("Access Granted")
+else:
+    print("Access Denied")
+"""
+
+"""
+#Frase e vogais
+frase = input('Digite uma frase: ')
+def conta_vogais(string): 
+    string = string.lower() 
+    result = {} 
+    vogais = 'aeiou' 
+    for i in vogais: 
+        if i in string: 
+            result[i] = string.count(i) 
+    return result 
+ 
+print(conta_vogais(frase)) 
+"""
